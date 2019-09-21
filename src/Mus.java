@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 public class Mus {
 
-    private final Espanyola baraja;
-    private ArrayList<Player> jugadores;
+    protected final Espanyola baraja;
+    protected final ArrayList<Player> jugadores = new ArrayList<>();
 
     public Mus() {
         baraja = new Espanyola();
@@ -13,4 +13,10 @@ public class Mus {
     void addJugador(Player player) {
         jugadores.add(player);
     }
+
+    @Override
+    public String toString() {
+        return "Mus{" + "baraja=" + baraja.cartas + ", \njugadores=" + jugadores + '}';
+    }
+      
 }

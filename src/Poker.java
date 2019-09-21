@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 public class Poker {
 
-    private final Francesa baraja;
-    private ArrayList<Player> jugadores;
+    protected final Francesa baraja;
+    protected ArrayList<Player> jugadores;
 
     public Poker(ArrayList<Player> jugadores) throws IllegalArgumentException {
         if (jugadores == null)
@@ -18,6 +18,11 @@ public class Poker {
 
     void addJugador(Player player) {
         jugadores.add(player);
+    }
+
+    @Override
+    public String toString() {
+        return "Poker{" + "baraja=" + baraja.cartas + ", \njugadores=" + jugadores + '}';
     }
     
 }

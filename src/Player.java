@@ -61,4 +61,9 @@ public class Player {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Player{" + "name=" + name + ", cards=" + hand() + '}';
+    }
+
 }
